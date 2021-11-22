@@ -65,6 +65,9 @@ p{
 .justify-space-between{
     justify-content: space-between;
 }
+.justify-around{
+    justify-content: space-around;
+}
 .justify-content-center{
     justify-content: center;
 }
@@ -141,8 +144,14 @@ p{
     margin-bottom: 3.5rem;
 }
 .layout_item{
-    flex: 0 0 calc(33.33% - 76px/3);
+    flex: 0 0 calc(33.33% - 76px/3); /*u kalkulaciju sam dodao i prostor oko itema u invisionu, mozda nisam trebao ali ovako izgleda pribliznije*/
     padding-top: 33px;
+    padding-bottom: 20px;  /*padding bottom je odokativan nisam mogao da vidim iz invisona*/
+    background-color: #F4F4F4;
+}
+.layout_item div p{
+    height: 12rem;       /*nisam mogao da odradim da mi budu svi itemi iste visine, ne ynam dal je ovako pravilno da se radi*/
+    overflow: hidden;
 }
 .layout_item:nth-of-type(1),
 .layout_item:nth-of-type(2),
@@ -175,7 +184,7 @@ p{
 /* layout section end*/
 
 
-/*grid se ction start*/
+/*grid section start*/
 .grid_section h2{
     font-size: 3.2rem;
     line-height: 4.3rem;
